@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/eco2green.png';
 
 const Home = () => {
   return (
     <div id="page-home">
       <div className="content">
         <header>
-          <img src={logo} alt="Ecoleta" />
+          <img src={logo} alt="Eco2Green" />
         </header>
 
         <main>

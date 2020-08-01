@@ -10,7 +10,7 @@ import Dropzone from '../../components/Dropzone';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/eco2green.png';
 
 // array ou objeto: manualmente informar o tipo da variavel
 
@@ -146,8 +146,12 @@ const CreatePoint = () => {
       data.append('image', selectedFile)
     }
 
-    await api.post('points', data);
-
+    try {
+      await api.post('points', data);
+    } catch (error) {
+      console.log(error);
+    }
+    
     alert('Ponto de coleta criado!');
 
     history.push('/');
